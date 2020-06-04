@@ -6,13 +6,13 @@ const routes=require("./routes/home");
 
 app.set("view engine","ejs");
 app.set("views","views");
-app.set("extractScripts",true);
-app.set("extractStyles",true);
+app.set("layout extractScripts",true);
+app.set("layout extractStyles",true);
 
-app.use("/",routes);
+
 app.use(layout);
 app.use(express.static('./static'))
-
+app.use("/",routes);
 
 app.listen(port,function(err){
     if(err)

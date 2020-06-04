@@ -1,0 +1,27 @@
+form{
+    position: relative;
+    left: 50%;
+    top: 40%;
+    width: 350px;
+    height: 170px;
+    transform: translate(-50%,-50%);
+    background-color: aliceblue;
+    text-align: center;
+}
+input[type="text"],input[type="password"]
+{
+    text-align: left;
+    padding: 10px;
+    width: 80%;
+    height: 12%;
+    margin: 10px;
+
+}
+input[type="submit"]
+{
+    text-align: center;
+    padding: 10px;
+    width: 30%;
+    height: 20%;
+    margin: 10px;
+}
