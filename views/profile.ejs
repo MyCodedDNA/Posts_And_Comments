@@ -1,1 +1,35 @@
 <h1>This is profile</h1>
+<br>
+<div>
+    
+<p><b><%= locals.user.name%></b></p>
+<p><%= locals.user.email%></p>
+</div>
+
+<form action="/home/post" method="post">
+<textarea name="content" id="" cols="30" rows="3" placeholder="write post" required></textarea>
+<input type="submit" value="post">
+</form>
+<% if(locals.posts) {%>
+    <% for(let i of locals.posts ){%>
+    <div>
+    <p><%= i.content%></p>
+    <a href="/home/delete_post?userid=<%=i.user.id%>&postid=<%=i.id%>">X</a><br>
+    </div>
+    
+
+    <form action="/home/comment?postid=<%=i.id%>" method="post">
+        <textarea name="content" id="" cols="30" rows="1" placeholder="write comment" required></textarea>
+        <input type="submit" value="comment">
+        </form>
+        <% if(i.comments) {%>
+        <% for(let j of i.comments ){%>
+            <div>
+            <p><%= j.content%></p>
+            <a href="/home/delete_comment?userid=<%=i.user.id%>&commentid=<%=j.id%>">X</a><br>
+            </div>
+        <%}%>
+        <%}%>
+
+    <%}%>
+<%}%>
