@@ -1,0 +1,51 @@
+*{
+    font-family: cursive;
+    text-transform: capitalize;
+    
+}
+#posts_comments
+{
+    position: relative;
+    top: 5%;
+    left: 5%;
+    width: 50%;
+
+}
+#user
+{
+    width: 200px;
+    height: 100px;
+    text-align: center;
+}
+.form_post
+{
+    width: 280px;
+    height: 150px;
+}
+
+.posts
+{
+    border: 2px solid tan;
+    padding: 10px;
+    margin: 10px 0;
+    word-wrap: break-word;
+}
+
+.form_comment
+{
+    position: relative;
+    left: 10%;
+    padding-top: 10px;
+    width: 280px;
+    height: 100px;
+}
+
+.comments
+{
+    position: relative;
+    left: 10%;
+    padding: 10px;
+    width: 50%;
+    word-wrap: break-word;
+    border: 2px dashed blueviolet;
+}
