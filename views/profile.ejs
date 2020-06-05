@@ -19,10 +19,7 @@
     </div>
     
 
-    <form action="/home/comment?postid=<%=i.id%>" method="post" class="form_comment">
-        <textarea name="content" id="" cols="30" rows="1" placeholder="write comment" required></textarea>
-        <input type="submit" value="comment">
-        </form>
+    
         <% if(i.comments) {%>
         <% for(let j of i.comments ){%>
             <div class="comments">
@@ -31,7 +28,10 @@
             </div>
         <%}%>
         <%}%>
-
+        <form action="/home/comment?postid=<%=i.id%>" method="post" class="form_comment">
+            <textarea name="content" id="" cols="30" rows="1" placeholder="write comment" required></textarea>
+            <input type="submit" value="comment">
+            </form>
     <%}%>
 <%}%>
 
